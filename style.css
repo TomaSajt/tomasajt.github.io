@@ -2,6 +2,7 @@ body{
   margin: 0;
   font-family: sans-serif;
   background: #DFDFDF;
+  line-height: 4vw
 }
 div{
   width: 50vw;
@@ -19,6 +20,7 @@ div #randomNameButton {
   width: 40vw;
   height: 5vw;
   font-size: 3vw;
+  padding: 0;
 }
 
 div #day{
