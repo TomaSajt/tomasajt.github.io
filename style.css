@@ -5,16 +5,33 @@ body{
   background: #DFDFDF;
 }
 div{
-  width: 300px;
-  padding: 40px;
+  width: 50%;
+  height: 25%;
+  padding: 5%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  background: #7F7F7F;
+  background: #3F7F7F;
   text-align: center;
+  border: 4px solid black;
 }
 
-button[id = "randomNameButton"] {
-  width: 200px;
+div #randomNameButton {
+  width: 75%;
+  font-size: 150%;
+  transition: all 0.25s ease;
+}
+
+div #randomNameButton:hover {
+  width: 100%;
+}
+
+div #day{
+  font-size: 240%;
+  font-weight: bold;
+}
+div #name {
+  font-size: 200%;
+  font-weight: bold;
 }
