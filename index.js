@@ -6,7 +6,7 @@ function onLoad() {
 }
 function tick() {
   d = new Date();
-  document.getElementById("box").querySelector("#time").innerHTML = d.getMinutes()+":"+d.getSeconds();
+  document.getElementById("box").querySelector("#time").innerHTML = d;
   document.getElementById("box").querySelector("#day").innerHTML = "Today is " + days[d.getDay()];
 }
 function randomElementOfArray(arr) {
