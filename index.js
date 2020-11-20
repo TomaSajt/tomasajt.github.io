@@ -1,6 +1,12 @@
-var d = new Date();
+var d;
 var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 function onLoad() {
+  tick();
+  setInterval(tick, 900)
+}
+function tick() {
+  d = new Date();
+  document.getElementById("box").querySelector("#time").innerHTML = d.getMinutes()+":"+d.getSeconds();
   document.getElementById("box").querySelector("#day").innerHTML = "Today is " + days[d.getDay()];
 }
 function randomElementOfArray(arr) {

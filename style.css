@@ -6,7 +6,7 @@ body{
 }
 div{
   width: 50vw;
-  height: 30vw;
+  height: 50vw;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -23,6 +23,10 @@ div #randomNameButton {
 
 div #day{
   font-size: 5vw;
+  font-weight: bold;
+}
+div #time{
+  font-size: 4vw;
   font-weight: bold;
 }
 div #name {
