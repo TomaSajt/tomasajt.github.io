@@ -2,12 +2,13 @@ var d;
 var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 function onLoad() {
   tick();
-  setInterval(tick, 900)
+  setInterval(tick, 100)
 }
 function tick() {
   d = new Date();
   document.getElementById("box").querySelector("#time").innerHTML = d;
   document.getElementById("box").querySelector("#day").innerHTML = "Today is " + days[d.getDay()];
+  document.getElementById("box").querySelector("#karesz").style.transform = "Rotate("+d.getSeconds()%4*90+"deg)";
 }
 function randomElementOfArray(arr) {
   if (arr instanceof Array) {
