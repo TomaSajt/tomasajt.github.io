@@ -4,9 +4,8 @@ body{
   background: #DFDFDF;
   line-height: 4vw
 }
-div{
+#box{
   width: 50vw;
-  height: 45vw;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -16,25 +15,28 @@ div{
   border: 0.3vw solid black;
 }
 
-div #randomNameButton {
+#box #randomNameButton {
   width: 40vw;
   height: 5vw;
   font-size: 3vw;
   padding: 0;
 }
 
-div #day{
+#box #day{
   font-size: 4vw;
+  padding: 0vw;
   font-weight: bold;
 }
-div #time{
+#box #time{
   font-size: 3vw;
+  padding: 0vw;
   font-weight: bold;
 }
-div #name {
+#box #name {
   font-size: 2.6vw;
+  padding: 0vw;
   font-weight: bold;
 }
-div #karesz {
+#box #karesz1, #box #karesz2 {
   width: 20vw;
 }

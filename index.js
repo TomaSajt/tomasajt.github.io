@@ -7,7 +7,8 @@ function onLoad() {
 function tick() {
   d = new Date();
   var box = document.getElementById("box");
-  box.querySelector("#karesz").style.transform = "Rotate("+d.getSeconds()%4*90+"deg)";
+  box.querySelector("#karesz1").style.transform = "Rotate("+d.getSeconds()%4*90+"deg)";
+  box.querySelector("#karesz2").style.transform = "Rotate("+Math.floor(d.getSeconds()/4)%4*90+"deg)";
   box.querySelector("#time").innerHTML = "Today is " + days[d.getDay()]+"<br>"+("0" + d.getHours()).slice(-2)+":"+("0" + d.getMinutes()).slice(-2)+":"+("0" + d.getSeconds()).slice(-2);
 }
 function randomElementOfArray(arr) {
