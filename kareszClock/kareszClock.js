@@ -8,8 +8,10 @@ function tick() {
   d = new Date();
   var box = document.querySelector("#box");
   var kareszBox = box.querySelector("#kareszBox")
-  kareszBox.querySelector("#karesz1").style.transform = "Rotate("+d.getSeconds()%4*90+"deg)";
-  kareszBox.querySelector("#karesz2").style.transform = "Rotate("+Math.floor(d.getSeconds()/4)%4*90+"deg)";
+  var timeMod16 = (d.getMinutes()*60+d.getSeconds())%16
+
+  kareszBox.querySelector("#karesz1").style.transform = "Rotate("+timeMod16%4*90+"deg)";
+  kareszBox.querySelector("#karesz2").style.transform = "Rotate("+Math.floor(timeMod16/4)%4*90+"deg)";
   box.querySelector("#time").innerHTML = "Today is " + days[d.getDay()]+"<br>"+("0" + d.getHours()).slice(-2)+":"+("0" + d.getMinutes()).slice(-2)+":"+("0" + d.getSeconds()).slice(-2);
 }
 function randomElementOfArray(arr) {

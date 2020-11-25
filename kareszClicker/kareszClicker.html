@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Karesz Clicker v1.0</title>
+    <link rel="stylesheet" href="kareszClicker.css">
+  </head>
+  <script src="kareszClicker.js"></script>
+  <body onload="onPageLoad()">
+    <div id="mainContainer">
+      <h1 id="kareszCount">Karesz count:</h1>
+      <img src="../Karesz.png" id="kareszImage" onclick="kareszClicked()">
+      <br>
+      <button id="saveButton" onclick="saveGame()">Save</button>
+      <button id="loadButton" onclick="loadGame(true)">Load</button>
+      <button id="resetButton" onclick="resetGame()">Reset</button>
+    </div>
+  </body>
+</html>

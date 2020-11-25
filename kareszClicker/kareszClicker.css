@@ -1,0 +1,16 @@
+body {
+  background: #AFAFAF;
+}
+
+#mainContainer{
+  text-align: center;
+}
+#kareszImage{
+  width: 20vw;
+}
+#kareszCount {
+  font-size: 6vw;
+}
+#saveButton, #loadButton, #resetButton {
+  font-size: 3vw;
+}
