@@ -7,9 +7,16 @@
   </head>
   <script src="kareszClicker.js"></script>
   <body onload="onPageLoad()">
-    <div id="mainContainer">
+    <div id="sidebar">
+      <div class="item">
+      <div>Karesz Generator</div>
+      <button class="itemButton">Buy 1</button>
+      <div>Price: 0 Karesz</div>
+    </div>
+    </div>
+    <div id="kareszContainer">
       <h1 id="kareszCount">Karesz count:</h1>
-      <img src="../Karesz.png" id="kareszImage" onclick="kareszClicked()">
+      <img src="Karesz.png" id="kareszImage" onclick="kareszClicked()">
       <br>
       <button id="saveButton" onclick="saveGame()">Save</button>
       <button id="loadButton" onclick="loadGame(true)">Load</button>

@@ -6,16 +6,15 @@ var kpc = 1;
 var kps = 0;
 
 function onPageLoad() {
-  box = document.querySelector("#mainContainer");
+  box = document.querySelector("#kareszContainer");
   kareszCountText = box.querySelector("#kareszCount")
   kareszImage = box.querySelector("#kareszImage")
   if (localStorage.getItem("saved") != "true") {
     saveGame();
   }
   loadGame(false);
-
-
 }
+
 function kareszClicked() {
   earn(kpc);
 }
@@ -32,7 +31,7 @@ function saveGame() {
 }
 function loadGame(shouldAsk) {
   if (shouldAsk) {
-    if(!confirm(`Are you sure you want to load your save with ${parseInt(localStorage.getItem("kareszCount"))} Karesz'`)) {
+    if(confirm(`Are you sure you want to load your save with ${parseInt(localStorage.getItem("kareszCount"))} Karesz'`)) {
       return;
     }
   }
