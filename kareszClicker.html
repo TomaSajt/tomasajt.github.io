@@ -10,12 +10,13 @@
     <div id="sidebar">
       <div class="item">
       <div>Karesz Generator</div>
-      <button class="itemButton">Buy 1</button>
-      <div>Price: 0 Karesz</div>
+      <button class="itemButton" onclick="buyKareszGenerator(1)">Buy 1</button>
+      <div id="kareszGeneratorPriceText">Price: 0 Karesz</div>
     </div>
     </div>
     <div id="kareszContainer">
-      <h1 id="kareszCount">Karesz count:</h1>
+      <h1 id="kareszCountText">Karesz count:</h1>
+      <h2 id="kareszPerSecText">0 Karesz/sec</h2>
       <img src="Karesz.png" id="kareszImage" onclick="kareszClicked()">
       <br>
       <button id="saveButton" onclick="saveGame()">Save</button>
