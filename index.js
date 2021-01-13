@@ -1,4 +1,4 @@
-async function MTI() {
+async function OS() {
   fetch("https://cors-anywhere.herokuapp.com/http://os.mti.hu/kozlemenyek", {method: 'GET'}).then(r => r.text()).then(html => {
 
 	var parser = new DOMParser();
