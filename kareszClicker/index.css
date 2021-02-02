@@ -2,25 +2,36 @@ body {
     background: #AFAFAF;
     margin: 0;
     overflow: hidden;
+    font-family: Calibri;
+}
+
+button {
+    font: inherit;
 }
 
 #sidebar {
-    width: 30%;
+    width: 250px;
     height: 100vh;
     float: left;
-    background: #7F7F7F;
+    background: #5F5F5F;
+    display:inline-block;
 }
 
 .item {
-    padding: 2%;
-    border: 1px solid #BFBFBF;
+    background: #7F7F7F;
+    margin: 5px;
+    overflow-y: hidden;
+    font-weight: bold;
     text-align: center;
-    font-size: 2vw;
+    font-size: 30px;
+    border: 2px solid black
 }
 
+
 .itemButton {
-    width: 50%;
-    font-size: 1.5vw;
+    width: 150px;
+    font-size: 30px;
+    height: 70px;
 }
 
 #kareszContainer {
@@ -29,6 +40,7 @@ body {
     border: 1px solid #FFFFFF;
     top: 50%;
     float: left;
+    display: inline-block;
 }
 
 #kareszImage {
@@ -51,5 +63,5 @@ body {
 }
 
 #saveButton, #loadButton, #resetButton {
-    font-size: 3vw;
+    font-size: 35px;
 }
