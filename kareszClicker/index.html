@@ -5,24 +5,18 @@
     <title>Karesz Clicker v1.1</title>
     <link rel="stylesheet" href="index.css">
     <script src="index.js"></script>
-    <script src="helper.js"></script>
 </head>
-<body onload="onPageLoad()">
+<body>
     <div id="sidebar">
-        <div class="item">
-            <div>Karesz Generator</div>
-            <button class="itemButton" onclick="buyKareszGenerator(1)">Buy 1</button>
-            <div id="kareszGeneratorPriceText">Price: 0</div>
-        </div>
     </div>
     <div id="kareszContainer">
         <h1 id="kareszCountText">Karesz count:</h1>
         <h2 id="kareszPerSecText">0 Karesz/sec</h2>
-        <img src="../Karesz.png" id="kareszImage" onclick="kareszClicked()">
+        <img src="../Karesz.png" id="kareszImage">
         <br>
-        <button id="saveButton" onclick="saveGame()">Save</button>
-        <button id="loadButton" onclick="loadGame(true)">Load</button>
-        <button id="resetButton" onclick="resetGame()">Reset</button>
+        <button id="saveButton">Save</button>
+        <button id="loadButton">Load</button>
+        <button id="resetButton">Reset</button>
     </div>
 </body>
 </html>
