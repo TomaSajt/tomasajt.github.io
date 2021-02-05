@@ -15,8 +15,9 @@
 
     function defaultItems() {
         return [
+            new Item("strongClick", "Strong Click", 100, 3, 0, 1, function () { return true }),
             new Item("kareszGenerator", "Karesz Generator", 50, 1.5, 1, 0, function () { return true }),
-            new Item("kareszFactory", "Karesz Factory", 600, 1.6, 10, 0, function () { return items[0].count >= 3 })
+            new Item("kareszFactory", "Karesz Factory", 600, 1.6, 10, 0, function () { return items[1].count >= 3 })
         ]
     }
     var items = defaultItems();
@@ -40,10 +41,10 @@
         document.getElementById('loadButton').addEventListener("click", () => loadGame(true));
         document.getElementById('resetButton').addEventListener("click", () => resetGame());
         document.getElementById("kareszImage").addEventListener("click", () => kareszClicked());
-        if (localStorage.getItem('version') != '1.1') {
+        if (localStorage.getItem('version') != '1.1.1') {
             localStorage.setItem("saved", "false")
         }
-        localStorage.setItem("version", "1.1")
+        localStorage.setItem("version", "1.1.1")
         if (localStorage.getItem("saved") != "true") {
             saveGame();
         }
