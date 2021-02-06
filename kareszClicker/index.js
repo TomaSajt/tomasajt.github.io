@@ -1,4 +1,4 @@
-(()=> {
+(() => {
     class Item {
         constructor(id, itemText, price, multiplier, kps, kpc, criteria) {
             this.id = id;
@@ -17,15 +17,16 @@
         return [
             new Item("strongClick", "Strong Click", 100, 3, 0, 1, function () { return true }),
             new Item("kareszGenerator", "Karesz Generator", 50, 1.5, 1, 0, function () { return true }),
-            new Item("kareszFactory", "Karesz Factory", 600, 1.6, 10, 0, function () { return items[1].count >= 3 })
+            new Item("kareszFactory", "Karesz Factory", 600, 1.6, 10, 0, function () { return items[1].count >= 3 }),
+            new Item("kareszTown", "Karesz Town", 3000, 1.62, 69, 0, function () { return items[2].count >= 3 })
         ]
     }
+
     var items = defaultItems();
     var kareszCount = 0;
     var sidebar;
     var kareszCountText;
     var kareszPerSecText;
-    var kareszImage
     var kpc = 1;
     var kps = 0;
 
@@ -104,7 +105,7 @@
         kps = parseInt(localStorage.getItem("kps"));
         kpc = parseInt(localStorage.getItem("kpc"));
         var temp = JSON.parse(localStorage.getItem("items"))
-        for (var i = 0; i < items.length; i++) {
+        for (var i = 0; i < Math.min(items.length, temp.length); i++) {
             items[i].price = temp[i].price
             items[i].count = temp[i].count
             items[i].unlocked = temp[i].unlocked
