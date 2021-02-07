@@ -36,9 +36,7 @@
         kareszCountText = document.getElementById("kareszCountText")
         sidebar = document.getElementById("sidebar");
         kareszPerSecText = document.getElementById("kareszPerSecText")
-        kareszImage =
-
-            document.getElementById('saveButton').addEventListener("click", () => saveGame());
+        document.getElementById('saveButton').addEventListener("click", () => saveGame());
         document.getElementById('loadButton').addEventListener("click", () => loadGame(true));
         document.getElementById('resetButton').addEventListener("click", () => resetGame());
         document.getElementById("kareszImage").addEventListener("click", () => kareszClicked());
