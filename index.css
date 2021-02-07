@@ -1,11 +1,9 @@
 button {
-  padding: 10px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-align: center;
-  font-family: sans-serif;
-  display: inline-grid;
-}
-a {
-  text-decoration: none;
+    padding: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: center;
+    font-family: sans-serif;
+    display: inline-grid;
+    text-decoration: none;
 }
