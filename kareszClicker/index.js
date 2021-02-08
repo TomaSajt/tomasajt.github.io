@@ -1,4 +1,4 @@
-(() => {
+(function () {
     class Item {
         constructor(id, itemText, price, multiplier, kps, kpc, criteria) {
             this.id = id;
@@ -36,10 +36,10 @@
         kareszCountText = document.getElementById("kareszCountText")
         sidebar = document.getElementById("sidebar");
         kareszPerSecText = document.getElementById("kareszPerSecText")
-        document.getElementById('saveButton').addEventListener("click", () => saveGame());
-        document.getElementById('loadButton').addEventListener("click", () => loadGame(true));
-        document.getElementById('resetButton').addEventListener("click", () => resetGame());
-        document.getElementById("kareszImage").addEventListener("click", () => kareszClicked());
+        document.getElementById('saveButton').addEventListener("click", function () { saveGame() });
+        document.getElementById('loadButton').addEventListener("click", function () { loadGame(true) });
+        document.getElementById('resetButton').addEventListener("click", function () { resetGame() });
+        document.getElementById("kareszImage").addEventListener("click", function () { kareszClicked() });
         if (localStorage.getItem('version') != '1.1.1') {
             localStorage.setItem("saved", "false")
         }
@@ -154,7 +154,7 @@
         var itemButton = document.createElement("button")
         itemButton.className = "itemButton"
         itemButton.innerHTML = "Buy 1"
-        itemButton.addEventListener("click", () => buyItem(id, 1));
+        itemButton.addEventListener("click", function () { buyItem(id, 1) });
 
         var itemPriceText = document.createElement("div")
         itemPriceText.className = "itemPriceText"
