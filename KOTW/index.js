@@ -40,7 +40,7 @@ class Robot {
                 nextX -= 1;
                 break;
         }
-        return nextX >= 0 && nextX < data.length && nextY >= 0 && nextY < data[0].length && data[nextX, nextY] != 1
+        return nextX >= 0 && nextX < data.length && nextY >= 0 && nextY < data[0].length && data[nextX][nextY] != 1
     }
     getDirImage() {
         switch (this.dir) {
@@ -81,6 +81,8 @@ var leftImage
 var canvas = document.createElement("canvas")
 var imgSize = 20
 var data = create2DArray(41, 31)
+data[3][4] = 1
+data[30][10] = 3
 var karesz = new Robot()
 window.onload = () => {
     upImage = document.getElementById('up')
@@ -99,17 +101,47 @@ function clear() {
 function update() {
     clear()
     var ctx = getContext()
+    ctx.strokeStyle = "#3F3F3F"
     for (var i = 0; i <= data.length; i++) {
+        ctx.beginPath()
         ctx.moveTo((imgSize + 1) * i, 0)
         ctx.lineTo((imgSize + 1) * i, canvas.height)
         ctx.stroke()
     }
     for (var i = 0; i <= data[0].length; i++) {
+        ctx.beginPath()
         ctx.moveTo(0, (imgSize + 1) * i)
         ctx.lineTo(canvas.width, (imgSize + 1) * i)
         ctx.stroke()
     }
-    ctx.drawImage(karesz.getDirImage(), karesz.x * (imgSize + 1) + 1, karesz.y * (imgSize + 1), imgSize, imgSize)
+    for (var i = 0; i < data.length; i++) {
+        for (var j = 0; j < data[0].length; j++) {
+            if (data[i][j] == 1) {
+                ctx.fillStyle = "#3F3F3F"
+                ctx.fillRect(i * (imgSize + 1), j * (imgSize + 1), imgSize+1, imgSize+1)
+            }
+            if (data[i][j] >= 2) {
+                if (data[i][j] == 2) {
+                    ctx.fillStyle = "black"
+                } else if (data[i][j] == 3) {
+                    ctx.fillStyle = "red"
+                } else if (data[i][j] == 4) {
+                    ctx.fillStyle = "green"
+                } else if (data[i][j] == 5) {
+                    ctx.fillStyle = "yellow"
+                }
+                ctx.beginPath()
+                ctx.arc(i * (imgSize + 1) + imgSize / 2 + 0.5, j * (imgSize + 1) + imgSize / 2+0.5, (imgSize)/2-0.5, 0, 2*Math.PI)
+                ctx.fill()
+            }
+        }
+    }
+    try {
+        ctx.drawImage(karesz.getDirImage(), karesz.x * (imgSize + 1) + 1, karesz.y * (imgSize + 1))
+    } catch (e) {
+        console.log("could not draw karesz")
+    }
+    
 }
 function start() {
     canvas.width = data.length * (imgSize + 1) + 1;
@@ -117,6 +149,7 @@ function start() {
     canvas.style.padding = "10px"
     var ctx = getContext();
     ctx.translate(0.5, 0.5)
+    ctx.imageSmoothingEnabled = false;
     document.body.appendChild(canvas)
     update()
 }
