@@ -126,7 +126,7 @@ data[3][4] = 1
 data[30][10] = 3
 var karesz = new Robot()
 
-window.onload = () => {
+window.onload = function() {
     upImage = document.getElementById('up')
     rightImage = document.getElementById('right')
     downImage = document.getElementById('down')
