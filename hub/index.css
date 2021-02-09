@@ -1,9 +1,35 @@
-button {
-    padding: 10px;
-    overflow: hidden;
-    white-space: nowrap;
-    text-align: center;
-    font-family: sans-serif;
-    display: inline-grid;
-    text-decoration: none;
+html {
+    background-color: #f4f4f4;
 }
+
+body {
+    min-width: 320px;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+#wrapper {
+    text-align: center;
+    margin: 10% auto;
+    padding: 10%;
+    width: 70%;
+    max-width: 2000px;
+    background-color: white;
+}
+div.scrollmenu {
+    background-color: #333;
+    overflow: auto;
+    white-space: nowrap;
+}
+
+    div.scrollmenu a {
+        display: inline-block;
+        color: white;
+        text-align: center;
+        padding: 14px;
+        text-decoration: none;
+    }
+
+        div.scrollmenu a:hover {
+            background-color: #777;
+        }
