@@ -3,6 +3,21 @@
 <head>
     <title>Page not found</title>
     <style>
+        @keyframes fadeout {
+            from {
+                opacity: 1
+            }
+
+            to {
+                opacity: 0;
+            }
+        }
+
+        svg {
+            animation: fadeout 2s linear;
+            opacity: 0;
+        }
+
         * {
             margin: 0;
             text-align: center;
