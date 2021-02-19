@@ -137,7 +137,35 @@ data[5][1] = 1
 data[8][1] = 1
 var karesz = new Robot()
 
-window.onload = function() {
+function saveLevel() {
+    var levelString = "";
+    for (var j = 0; j < data[0].length; j++) {
+        for (var i = 0; i < data.length; i++) {
+            levelString += data[i][j]
+            if (i != data.length-1) {
+                levelString += "\t";
+            }
+        }
+        levelString += "\n";
+    }
+    var file = new Blob([levelString], { type: "text / plain" });
+    var name = "level.txt";
+    if (window.navigator.msSaveOrOpenBlob) // IE10+
+        window.navigator.msSaveOrOpenBlob(file, name);
+    else { // Others
+        var a = document.createElement("a"),
+            url = URL.createObjectURL(file);
+        a.href = url;
+        a.download = name;
+        document.body.appendChild(a);
+        a.click();
+        setTimeout(function () {
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+        }, 0);
+    }
+}
+window.onload = function () {
     upImage = document.getElementById('up')
     rightImage = document.getElementById('right')
     downImage = document.getElementById('down')
@@ -148,8 +176,7 @@ window.onload = function() {
     var ctx = getContext();
     ctx.translate(0.5, 0.5)
     ctx.imageSmoothingEnabled = false;
-    document.body.insertBefore(canvas, document.querySelector('h1').nextSibling)
-    canvas.addEventListener('click', (event) => {console.log(event.offsetX + " " + event.offsetY) })
+    document.getElementById('canvasContainer').appendChild(canvas)
     update()
 }
 document.addEventListener('mousedown', function (event) {
