@@ -5,42 +5,55 @@ body {
     font-family: Calibri;
 }
 
+#gridContainer {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 100vh;
+    grid-template-areas: "sidebar main";
+}
+
 button {
     font: inherit;
 }
 
 #sidebar {
-    width: 250px;
-    height: 100vh;
-    float: left;
     background: #5F5F5F;
-    display:inline-block;
+    grid-area: sidebar;
+    width: 30vw;
+    overflow-y: auto;
 }
 
 .item {
     background: #7F7F7F;
-    margin: 5px;
-    overflow-y: hidden;
+    width: 60%;
+    margin: auto;
+    margin-bottom: 1vw;
+    margin-top: 1vw;
+    padding-bottom: 2vw;
+    padding-top: 2vw;
+    padding-left: 10%;
+    padding-right: 10%;
     font-weight: bold;
     text-align: center;
-    font-size: 30px;
-    border: 2px solid black
+    font-size: 2.5vw;
+    border: 0.5vw solid black;
+    white-space: nowrap;
 }
 
 
 .itemButton {
-    width: 150px;
-    font-size: 30px;
-    height: 70px;
+    width: 10vw;
+    font-size: 3vw;
+    height: 4vw;
+    padding: 0;
+    line-height: 1em;
+    margin: 0.1vw;
+    border: none;
 }
 
 #kareszContainer {
     text-align: center;
-    width: 63%;
-    border: 1px solid #FFFFFF;
-    top: 50%;
-    float: left;
-    display: inline-block;
+    grid-area: main;
 }
 
 #kareszImage {
@@ -54,14 +67,25 @@ button {
 
 #kareszCountText {
     font-size: 6vw;
-    line-height: 10px;
+    margin-bottom: 0;
+    margin-top: 0;
 }
 
 #kareszPerSecText {
     font-size: 4vw;
-    line-height: 10px;
+    margin-bottom: 1vw;
+    margin-top: 0;
 }
 
 #saveButton, #loadButton, #resetButton {
-    font-size: 35px;
+    width: 15vw;
+    height: 6vw;
+    font-size: 3vw;
+    margin: 0;
+    text-align: center;
+    padding: 0;
+    line-height: 1em;
+    vertical-align:top;
+}
+br {
 }
