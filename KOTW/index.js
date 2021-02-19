@@ -3,7 +3,7 @@ class Robot {
     x = 10;
     y = 10;
     time = 0
-    stones = [100, 100, 100, 100]
+    stones = [NaN, NaN, 100, 100, 100, 100]
     step() {
         if (this.canStep(this.dir)) {
             switch (this.dir) {
@@ -87,7 +87,7 @@ class Robot {
     placeStone(color) {
         if (this.isStone())
             alert("I cannot place down the stone, because there already is one here!");
-        else if (this.stones[color - 2] <= 0)
+        else if (this.stones[color] <= 0)
             alert("I cannot place down a stone, because I don't have any!");
         else {
             data[this.x][this.y] = color;
@@ -98,8 +98,8 @@ class Robot {
     }
     pickUpStone() {
         if (this.isStone()) {
+            this.stones[this.getUnder()]++;
             data[this.x][this.y] = 0;
-            this.stones[this.getUnder() - 2]++;
             this.time++
             update()
         } else {
@@ -123,7 +123,18 @@ var canvas = document.createElement("canvas")
 var imgSize = 20
 var data = Array(41).fill().map(function () { return Array(31).fill(0) })
 data[3][4] = 1
-data[30][10] = 3
+data[3][5] = 1
+data[4][6] = 1
+data[5][6] = 1
+data[6][6] = 1
+data[7][6] = 1
+data[8][6] = 1
+data[9][6] = 1
+data[10][5] = 1
+data[10][4] = 1
+
+data[5][1] = 1
+data[8][1] = 1
 var karesz = new Robot()
 
 window.onload = function() {
@@ -134,12 +145,11 @@ window.onload = function() {
 
     canvas.width = data.length * (imgSize + 1) + 1;
     canvas.height = data[0].length * (imgSize + 1) + 1;
-    canvas.style.padding = "10px"
     var ctx = getContext();
     ctx.translate(0.5, 0.5)
     ctx.imageSmoothingEnabled = false;
     document.body.insertBefore(canvas, document.querySelector('h1').nextSibling)
-
+    canvas.addEventListener('click', (event) => {console.log(event.offsetX + " " + event.offsetY) })
     update()
 }
 document.addEventListener('mousedown', function (event) {
