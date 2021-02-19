@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+}
+
+@keyframes xd {
+    0% {
+        top: 50vh;
+        left: 50vw;
+    }
+
+    10% {
+        top: 7vh;
+        left: 50vw;
+    }
+
+    20% {
+        top: 7vh;
+        left: 15vw;
+    }
+
+    30% {
+        top: 50vh;
+        left: 15vw;
+    }
+
+    40% {
+        top: 50vh;
+        left: 85vw;
+        width: 30vw;
+    }
+    50% {
+        top: 93vh;
+        left: 85vw;
+        width: 16vw;
+    }
+
+    70% {
+        top: 69vh;
+        left: 42vw;
+        width: 14vw;
+    }
+    90% {
+        top: 20vh;
+        left: 80vw;
+        width: 8vw;
+        width: 8vw;
+    }
+}
+
+h1 {
+    text-align: center;
+    position: relative;
+    width: 30vw;
+    height: 14vh;
+    background-color: red;
+    top: 50vh;
+    left: 50vw;
+    font-size: 3vw;
+    transform: translate(-50%,-50%);
+}
+
+    h1:hover {
+        animation-name: xd;
+        animation-timing-function: linear;
+        animation-duration: 10s;
+    }
