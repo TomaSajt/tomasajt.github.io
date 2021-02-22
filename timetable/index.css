@@ -20,21 +20,6 @@ body {
     grid-gap: 10px;
 }
 
-.sidebar {
-    font-size: 1.2em;
-    text-align: center;
-}
-
-.header {
-    font-size: 2em;
-    text-align: center;
-}
-
-#title {
-    font-size: 1.5em;
-    text-align: center;
-}
-
 .greatCell {
     border: 1px solid black;
     justify-content: center;
@@ -42,6 +27,7 @@ body {
     grid-auto-rows: 1fr;
     grid-template-columns: 1fr;
     background-color: white;
+    font-size: 16px;
 }
 
     .greatCell > div:not(:first-child) {
@@ -55,3 +41,19 @@ body {
         top: 50%;
         transform: translate(0,-50%);
     }
+
+
+.sidebar {
+    font-size: 19.2px;
+    text-align: center;
+}
+
+.header {
+    font-size: 32px;
+    text-align: center;
+}
+
+#title {
+    font-size: 24px;
+    text-align: center;
+}
