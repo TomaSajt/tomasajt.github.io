@@ -1,7 +1,7 @@
 window.onload = function () {
     var container = document.getElementById("container");
     {
-        container.appendChild(createCell("Órarend", "", "title"))
+        container.appendChild(createCell("Ã“rarend", "", "title"))
     }
     for (var i = 0; i <= 8; i++) {
         container.appendChild(createCell(i, "header"));
@@ -40,9 +40,9 @@ window.onload = function () {
                     else items.push("")
                     if (entry.data.ol != null) items.push("(ol) " + lessonToString(entry.data.ol))
                     else items.push("")
-                    if (entry.data.ne1 != null) items.push("(né1) " + lessonToString(entry.data.ne1))
+                    if (entry.data.ne1 != null) items.push("(nÃ©1) " + lessonToString(entry.data.ne1))
                     else items.push("")
-                    if (entry.data.ne2 != null) items.push("(né2) " + lessonToString(entry.data.ne2))
+                    if (entry.data.ne2 != null) items.push("(nÃ©2) " + lessonToString(entry.data.ne2))
                     else items.push("")
                     if (entry.data.fr != null) items.push("(fr) " + lessonToString(entry.data.fr))
                     else items.push("")

@@ -1,40 +1,40 @@
-const days = ["Hétfõ", "Kedd", "Szerda", "Csütörtök", "Péntek"]
+const days = ["HÃ©tfÅ‘", "Kedd", "Szerda", "CsÃ¼tÃ¶rtÃ¶k", "PÃ©ntek"]
 const colorMap = {
-    //Lyukas óra
+    //Lyukas Ã³ra
     0: "pink",
 
-    //Közös óra
+    //KÃ¶zÃ¶s Ã³ra
     1: "lightskyblue",
 
-    //Inf-Tk óra
+    //Inf-Tk Ã³ra
     2: "yellow",
 
-    //Angol óra
+    //Angol Ã³ra
     3: "lawngreen",
 
-    //2. idegen nyelv óra
+    //2. idegen nyelv Ã³ra
     4: "orange"
 }
 const nyf =
     [
         [
-            //Hétfõ-0
+            //HÃ©tfÅ‘-0
             {
                 type: 2,
                 data: {
                     szt: {
-                        name: "Darabánt",
+                        name: "DarabÃ¡nt",
                         class: "mt",
                         room: "I.30"
                     }
                 }
             },
-            //Hétfõ-1
+            //HÃ©tfÅ‘-1
             {
                 type: 2,
                 data: {
                     szt: {
-                        name: "Krajnyák",
+                        name: "KrajnyÃ¡k",
                         class: "inf",
                         room: "Szt.2"
                     },
@@ -45,29 +45,29 @@ const nyf =
                     }
                 }
             },
-            //Hétfõ-2
+            //HÃ©tfÅ‘-2
             {
                 type: 2,
                 data: {
                     szt: {
-                        name: "Krajnyák",
+                        name: "KrajnyÃ¡k",
                         class: "inf",
                         room: "Szt.2"
                     },
                     tk: {
-                        name: "Pók",
+                        name: "PÃ³k",
                         class: "inf",
                         room: "Tk."
                     }
                 }
             },
-            //Hétfõ-3
+            //HÃ©tfÅ‘-3
             {
                 type: 4,
                 data: {
                     ne1: {
-                        name: "Halász",
-                        class: "né",
+                        name: "HalÃ¡sz",
+                        class: "nÃ©",
                         room: "R."
                     },
                     ol: {
@@ -76,8 +76,8 @@ const nyf =
                         room: "Ol.2"
                     },
                     ne2: {
-                        name: "Sótiné",
-                        class: "né",
+                        name: "SÃ³tinÃ©",
+                        class: "nÃ©",
                         room: "N."
                     },
                     sp: {
@@ -92,11 +92,11 @@ const nyf =
                     }
                 }
             },
-            //Hétfõ-4
+            //HÃ©tfÅ‘-4
             {
                 type: 0
             },
-            //Hétfõ-5
+            //HÃ©tfÅ‘-5
             {
                 type: 3,
                 data: {
@@ -111,7 +111,7 @@ const nyf =
                         room: "II.41"
                     },
                     an4: {
-                        name: "Tóth",
+                        name: "TÃ³th",
                         class: "a",
                         room: "A.3"
                     },
@@ -122,12 +122,12 @@ const nyf =
                     }
                 }
             },
-            //Hétfõ-6
+            //HÃ©tfÅ‘-6
             {
                 type: 3,
                 data: {
                     an2: {
-                        name: "Bertók",
+                        name: "BertÃ³k",
                         class: "a",
                         room: "Szt.3"
                     },
@@ -137,7 +137,7 @@ const nyf =
                         room: "II.41"
                     },
                     an4: {
-                        name: "Tóth",
+                        name: "TÃ³th",
                         class: "a",
                         room: "A.3"
                     },
@@ -148,11 +148,11 @@ const nyf =
                     }
                 }
             },
-            //Hétfõ-7
+            //HÃ©tfÅ‘-7
             {
                 type: 0
             },
-            //Hétfõ-8
+            //HÃ©tfÅ‘-8
             {
                 type: 0
             }
@@ -167,8 +167,8 @@ const nyf =
                 type: 4,
                 data: {
                     ne1: {
-                        name: "Halász",
-                        class: "né",
+                        name: "HalÃ¡sz",
+                        class: "nÃ©",
                         room: "N."
                     },
                     ol: {
@@ -177,8 +177,8 @@ const nyf =
                         room: "Ol.1"
                     },
                     ne2: {
-                        name: "Sótiné",
-                        class: "né",
+                        name: "SÃ³tinÃ©",
+                        class: "nÃ©",
                         room: "A.1"
                     },
                     sp: {
@@ -198,8 +198,8 @@ const nyf =
                 type: 4,
                 data: {
                     ne1: {
-                        name: "Halász",
-                        class: "né",
+                        name: "HalÃ¡sz",
+                        class: "nÃ©",
                         room: "N."
                     },
                     ol: {
@@ -208,8 +208,8 @@ const nyf =
                         room: "Ol.1"
                     },
                     ne2: {
-                        name: "Sótiné",
-                        class: "né",
+                        name: "SÃ³tinÃ©",
+                        class: "nÃ©",
                         room: "A.1"
                     },
                     sp: {
@@ -224,12 +224,12 @@ const nyf =
                 type: 2,
                 data: {
                     szt: {
-                        name: "Tóth",
+                        name: "TÃ³th",
                         class: "a",
                         room: "F.10"
                     },
                     tk: {
-                        name: "Krajnyák",
+                        name: "KrajnyÃ¡k",
                         class: "mt",
                         room: "I.30"
                     }
@@ -240,7 +240,7 @@ const nyf =
                 type: 2,
                 data: {
                     szt: {
-                        name: "Darabánt",
+                        name: "DarabÃ¡nt",
                         class: "mt",
                         room: "I.30"
                     },
@@ -256,7 +256,7 @@ const nyf =
                 type: 2,
                 data: {
                     szt: {
-                        name: "Krajnyák",
+                        name: "KrajnyÃ¡k",
                         class: "inf",
                         room: "Szt.2"
                     },
@@ -272,12 +272,12 @@ const nyf =
                 type: 3,
                 data: {
                     an2: {
-                        name: "Bertók",
+                        name: "BertÃ³k",
                         class: "a",
                         room: "A.2"
                     },
                     an4: {
-                        name: "Juhász A.",
+                        name: "JuhÃ¡sz A.",
                         class: "a",
                         room: "A.3"
                     },
@@ -324,7 +324,7 @@ const nyf =
                 type: 1,
                 data: {
                     lesson: {
-                        name: "Krajnyák",
+                        name: "KrajnyÃ¡k",
                         class: "of",
                         room: "I.30"
                     }
@@ -335,7 +335,7 @@ const nyf =
                 type: 3,
                 data: {
                     an2: {
-                        name: "Bertók",
+                        name: "BertÃ³k",
                         class: "a",
                         room: "A.1"
                     },
@@ -361,7 +361,7 @@ const nyf =
                 type: 3,
                 data: {
                     an2: {
-                        name: "Huszár",
+                        name: "HuszÃ¡r",
                         class: "a",
                         room: "I.30"
                     },
@@ -371,7 +371,7 @@ const nyf =
                         room: "A.2"
                     },
                     an4: {
-                        name: "Tóth",
+                        name: "TÃ³th",
                         class: "a",
                         room: "F.18"
                     },
@@ -391,12 +391,12 @@ const nyf =
                 type: 2,
                 data: {
                     szt: {
-                        name: "P.-Pásztor",
+                        name: "P.-PÃ¡sztor",
                         class: "i",
                         room: "I.39."
                     },
                     tk: {
-                        name: "Krajnyák",
+                        name: "KrajnyÃ¡k",
                         class: "mt",
                         room: "T.2"
                     }
@@ -416,7 +416,7 @@ const nyf =
             }
         ],
         [
-            //Csütörtök-0
+            //CsÃ¼tÃ¶rtÃ¶k-0
             {
                 type: 3,
                 data: {
@@ -427,12 +427,12 @@ const nyf =
                     }
                 }
             },
-            //Csütörtök-1
+            //CsÃ¼tÃ¶rtÃ¶k-1
             {
                 type: 3,
                 data: {
                     an2: {
-                        name: "Huszár",
+                        name: "HuszÃ¡r",
                         class: "a",
                         room: "A.2"
                     },
@@ -442,7 +442,7 @@ const nyf =
                         room: "II.41"
                     },
                     an4: {
-                        name: "Tóth",
+                        name: "TÃ³th",
                         class: "a",
                         room: "I.30"
                     },
@@ -453,13 +453,13 @@ const nyf =
                     }
                 }
             },
-            //Csütörtök-2
+            //CsÃ¼tÃ¶rtÃ¶k-2
             {
                 type: 4,
                 data: {
                     ne1: {
-                        name: "Halász",
-                        class: "né",
+                        name: "HalÃ¡sz",
+                        class: "nÃ©",
                         room: "Szt.3"
                     },
                     ol: {
@@ -468,8 +468,8 @@ const nyf =
                         room: "F.9"
                     },
                     ne2: {
-                        name: "Sótiné",
-                        class: "né",
+                        name: "SÃ³tinÃ©",
+                        class: "nÃ©",
                         room: "II.51"
                     },
                     sp: {
@@ -484,39 +484,39 @@ const nyf =
                     }
                 }
             },
-            //Csütörtök-3
+            //CsÃ¼tÃ¶rtÃ¶k-3
             {
                 type: 2,
                 data: {
                     szt: {
-                        name: "Krajnyák",
+                        name: "KrajnyÃ¡k",
                         class: "inf",
                         room: "Szt.1"
                     },
                     tk: {
-                        name: "P.-Pásztor",
+                        name: "P.-PÃ¡sztor",
                         class: "ny",
                         room: "I.30"
                     }
                 }
             },
-            //Csütörtök-4
+            //CsÃ¼tÃ¶rtÃ¶k-4
             {
                 type: 2,
                 data: {
                     szt: {
-                        name: "Darabánt",
+                        name: "DarabÃ¡nt",
                         class: "mt",
                         room: "M."
                     },
                     tk: {
-                        name: "Krajnyák",
+                        name: "KrajnyÃ¡k",
                         class: "mt",
                         room: "T.2"
                     }
                 }
             },
-            //Csütörtök-5
+            //CsÃ¼tÃ¶rtÃ¶k-5
             {
                 type: 2,
                 data: {
@@ -527,34 +527,34 @@ const nyf =
                     }
                 }
             },
-            //Csütörtök-6
+            //CsÃ¼tÃ¶rtÃ¶k-6
             {
                 type: 0
             },
-            //Csütörtök-7
+            //CsÃ¼tÃ¶rtÃ¶k-7
             {
                 type: 0
             },
-            //Csütörtök-8
+            //CsÃ¼tÃ¶rtÃ¶k-8
             {
                 type: 0
             }
         ],
         [
-            //Péntek-0
+            //PÃ©ntek-0
             {
                 type: 0
             },
-            //Péntek-1
+            //PÃ©ntek-1
             {
                 type: 0
             },
-            //Péntek-2
+            //PÃ©ntek-2
             {
                 type: 3,
                 data: {
                     an2: {
-                        name: "Huszár",
+                        name: "HuszÃ¡r",
                         class: "a",
                         room: "I.32"
                     },
@@ -564,7 +564,7 @@ const nyf =
                         room: "Szt.3"
                     },
                     an4: {
-                        name: "Tóth",
+                        name: "TÃ³th",
                         class: "a",
                         room: "R."
                     },
@@ -575,12 +575,12 @@ const nyf =
                     }
                 }
             },
-            //Péntek-2
+            //PÃ©ntek-2
             {
                 type: 3,
                 data: {
                     an2: {
-                        name: "Huszár",
+                        name: "HuszÃ¡r",
                         class: "a",
                         room: "I.32"
                     },
@@ -590,7 +590,7 @@ const nyf =
                         room: "Szt.3"
                     },
                     an4: {
-                        name: "Tóth",
+                        name: "TÃ³th",
                         class: "a",
                         room: "R."
                     },
@@ -601,27 +601,27 @@ const nyf =
                     }
                 }
             },
-            //Péntek-4
+            //PÃ©ntek-4
             {
                 type: 2,
                 data: {
                     szt: {
-                        name: "P.-Pásztor",
+                        name: "P.-PÃ¡sztor",
                         class: "ny",
                         room: "I.30."
                     },
                     tk: {
-                        name: "Tóth",
+                        name: "TÃ³th",
                         class: "a",
                         room: "F.18"
                     }
                 }
             },
-            //Péntek-6
+            //PÃ©ntek-6
             {
                 type: 0
             },
-            //Péntek-6
+            //PÃ©ntek-6
             {
                 type: 4,
                 data: {
@@ -631,8 +631,8 @@ const nyf =
                         room: "L."
                     },
                     ne2: {
-                        name: "Sótiné",
-                        class: "né",
+                        name: "SÃ³tinÃ©",
+                        class: "nÃ©",
                         room: "N."
                     },
                     sp: {
@@ -642,11 +642,11 @@ const nyf =
                     }
                 }
             },
-            //Péntek-7
+            //PÃ©ntek-7
             {
                 type: 0
             },
-            //Péntek-8
+            //PÃ©ntek-8
             {
                 type: 0
             }
