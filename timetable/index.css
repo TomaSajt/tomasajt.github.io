@@ -4,14 +4,13 @@
 }
 
 body {
-    background-color: #5a81c7;
+    background-color: #777;
 }
 
 
 #container {
     padding: 10px;
     font-family: sans-serif;
-    background-color: #5a81c7;
     color: black;
     display: grid;
     grid-template-columns: 100px repeat(9, 190px);
