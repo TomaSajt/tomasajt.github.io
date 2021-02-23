@@ -1,7 +1,7 @@
 window.onload = function () {
     var container = document.getElementById("container");
     {
-        container.appendChild(createCell("Órarend", "", "title"))
+        container.appendChild(createCell("Órarend", null, "title"))
     }
     for (var i = 0; i <= 8; i++) {
         container.appendChild(createCell(i, "header"));
@@ -62,12 +62,12 @@ window.onload = function () {
 
 
     function lessonToString(lesson) {
-        return lesson.name + " " + lesson.class + " [" + lesson.room + "]"
+        return lesson.name + " " + lesson.subject + " [" + lesson.room + "]"
     }
-    function createCell(items, clazz = "", id = "") {
+    function createCell(items, clazz, id) {
         var cell = document.createElement('div');
-        cell.className = "greatCell " + clazz;
-        cell.id = id;
+        if (clazz) cell.className = clazz;
+        if (id) cell.id = id;
         if (items instanceof Array) {
             items.forEach(item => {
                 cell.appendChild(createDoubleDiv(item));

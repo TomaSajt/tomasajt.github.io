@@ -9,6 +9,8 @@ body {
 
 
 #container {
+    background-color: red;
+    width: 1920px;
     padding: 10px;
     font-family: sans-serif;
     color: black;
@@ -17,42 +19,43 @@ body {
     grid-template-rows: 80px;
     grid-auto-rows: 120px;
     grid-gap: 10px;
+    box-sizing: border-box;
 }
 
-.greatCell {
-    border: 1px solid black;
-    justify-content: center;
-    display: grid;
-    grid-auto-rows: 1fr;
-    grid-template-columns: 1fr;
-    background-color: white;
-    font-size: 16px;
-}
-
-    .greatCell > div:not(:first-child) {
-        border-top: 0.3px solid black;
-    }
-
-    .greatCell > div > div {
-        padding-left: 7px;
-        padding-right: 7px;
-        position: relative;
-        top: 50%;
-        transform: translate(0,-50%);
+    #container > div {
+        border: 1px solid black;
+        justify-content: center;
+        display: grid;
+        grid-auto-rows: 1fr;
+        grid-template-columns: 1fr;
+        background-color: white;
+        font-size: 16px;
     }
 
 
-.sidebar {
-    font-size: 19.2px;
-    text-align: center;
-}
+        #container > div.sidebar {
+            font-size: 19.2px;
+            text-align: center;
+        }
 
-.header {
-    font-size: 32px;
-    text-align: center;
-}
+        #container > div.header {
+            font-size: 32px;
+            text-align: center;
+        }
 
-#title {
-    font-size: 24px;
-    text-align: center;
-}
+        #container > div#title {
+            font-size: 24px;
+            text-align: center;
+        }
+
+        #container > div > div:not(:first-child) {
+            border-top: 0.3px solid black;
+        }
+
+        #container > div > div > div {
+            padding-left: 7px;
+            padding-right: 7px;
+            position: relative;
+            top: 50%;
+            transform: translate(0,-50%);
+        }

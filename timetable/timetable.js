@@ -24,7 +24,7 @@ const nyf =
                 data: {
                     szt: {
                         name: "Darabánt",
-                        class: "mt",
+                        subject: "mt",
                         room: "I.30"
                     }
                 }
@@ -35,12 +35,12 @@ const nyf =
                 data: {
                     szt: {
                         name: "Krajnyák",
-                        class: "inf",
+                        subject: "inf",
                         room: "Szt.2"
                     },
                     tk: {
                         name: "Szabados",
-                        class: "inf",
+                        subject: "inf",
                         room: "Tk."
                     }
                 }
@@ -51,12 +51,12 @@ const nyf =
                 data: {
                     szt: {
                         name: "Krajnyák",
-                        class: "inf",
+                        subject: "inf",
                         room: "Szt.2"
                     },
                     tk: {
                         name: "Pók",
-                        class: "inf",
+                        subject: "inf",
                         room: "Tk."
                     }
                 }
@@ -67,27 +67,27 @@ const nyf =
                 data: {
                     ne1: {
                         name: "Halász",
-                        class: "né",
+                        subject: "né",
                         room: "R."
                     },
                     ol: {
                         name: "Gianelli",
-                        class: "ol",
+                        subject: "ol",
                         room: "Ol.2"
                     },
                     ne2: {
                         name: "Sótiné",
-                        class: "né",
+                        subject: "né",
                         room: "N."
                     },
                     sp: {
                         name: "Sum",
-                        class: "sp",
+                        subject: "sp",
                         room: "Sp."
                     },
                     fr: {
                         name: "Szabolcsi",
-                        class: "fr",
+                        subject: "fr",
                         room: "Fr."
                     }
                 }
@@ -102,22 +102,22 @@ const nyf =
                 data: {
                     an2: {
                         name: "Hajba",
-                        class: "a",
+                        subject: "a",
                         room: "Szt.3"
                     },
                     an3: {
                         name: "Seprenyi",
-                        class: "a",
+                        subject: "a",
                         room: "II.41"
                     },
                     an4: {
                         name: "Tóth",
-                        class: "a",
+                        subject: "a",
                         room: "A.3"
                     },
                     an1: {
                         name: "Varga Bo.",
-                        class: "a",
+                        subject: "a",
                         room: "I.30"
                     }
                 }
@@ -128,22 +128,22 @@ const nyf =
                 data: {
                     an2: {
                         name: "Bertók",
-                        class: "a",
+                        subject: "a",
                         room: "Szt.3"
                     },
                     an3: {
                         name: "Seprenyi",
-                        class: "a",
+                        subject: "a",
                         room: "II.41"
                     },
                     an4: {
                         name: "Tóth",
-                        class: "a",
+                        subject: "a",
                         room: "A.3"
                     },
                     an1: {
                         name: "Varga Bo.",
-                        class: "a",
+                        subject: "a",
                         room: "I.30"
                     }
                 }
@@ -168,27 +168,27 @@ const nyf =
                 data: {
                     ne1: {
                         name: "Halász",
-                        class: "né",
+                        subject: "né",
                         room: "N."
                     },
                     ol: {
                         name: "Gianelli",
-                        class: "ol",
+                        subject: "ol",
                         room: "Ol.1"
                     },
                     ne2: {
                         name: "Sótiné",
-                        class: "né",
+                        subject: "né",
                         room: "A.1"
                     },
                     sp: {
                         name: "Sum",
-                        class: "sp",
+                        subject: "sp",
                         room: "Sp."
                     },
                     fr: {
                         name: "Szabolcsi",
-                        class: "fr",
+                        subject: "fr",
                         room: "Fr."
                     }
                 }
@@ -199,22 +199,22 @@ const nyf =
                 data: {
                     ne1: {
                         name: "Halász",
-                        class: "né",
+                        subject: "né",
                         room: "N."
                     },
                     ol: {
                         name: "Gianelli",
-                        class: "ol",
+                        subject: "ol",
                         room: "Ol.1"
                     },
                     ne2: {
                         name: "Sótiné",
-                        class: "né",
+                        subject: "né",
                         room: "A.1"
                     },
                     sp: {
                         name: "Sum",
-                        class: "sp",
+                        subject: "sp",
                         room: "Sp."
                     }
                 }
@@ -225,12 +225,12 @@ const nyf =
                 data: {
                     szt: {
                         name: "Tóth",
-                        class: "a",
+                        subject: "a",
                         room: "F.10"
                     },
                     tk: {
                         name: "Krajnyák",
-                        class: "mt",
+                        subject: "mt",
                         room: "I.30"
                     }
                 }
@@ -241,12 +241,12 @@ const nyf =
                 data: {
                     szt: {
                         name: "Darabánt",
-                        class: "mt",
+                        subject: "mt",
                         room: "I.30"
                     },
                     tk: {
                         name: "Papp L",
-                        class: "inf",
+                        subject: "inf",
                         room: "Tk."
                     }
                 }
@@ -257,12 +257,12 @@ const nyf =
                 data: {
                     szt: {
                         name: "Krajnyák",
-                        class: "inf",
+                        subject: "inf",
                         room: "Szt.2"
                     },
                     tk: {
                         name: "Papp L",
-                        class: "inf",
+                        subject: "inf",
                         room: "Tk."
                     }
                 }
@@ -273,22 +273,22 @@ const nyf =
                 data: {
                     an2: {
                         name: "Bertók",
-                        class: "a",
+                        subject: "a",
                         room: "A.2"
                     },
                     an4: {
                         name: "Juhász A.",
-                        class: "a",
+                        subject: "a",
                         room: "A.3"
                     },
                     an3: {
                         name: "Seprenyi",
-                        class: "a",
+                        subject: "a",
                         room: "II.41"
                     },
                     an1: {
                         name: "Varga Bo.",
-                        class: "a",
+                        subject: "a",
                         room: "N."
                     }
                 }
@@ -309,12 +309,12 @@ const nyf =
                 data: {
                     ol: {
                         name: "Gianelli",
-                        class: "ol",
+                        subject: "ol",
                         room: "Ol.1"
                     },
                     sp: {
                         name: "Sum",
-                        class: "sp",
+                        subject: "sp",
                         room: "Sp."
                     }
                 }
@@ -325,7 +325,7 @@ const nyf =
                 data: {
                     lesson: {
                         name: "Krajnyák",
-                        class: "of",
+                        subject: "of",
                         room: "I.30"
                     }
                 }
@@ -336,22 +336,22 @@ const nyf =
                 data: {
                     an2: {
                         name: "Bertók",
-                        class: "a",
+                        subject: "a",
                         room: "A.1"
                     },
                     an4: {
                         name: "Hajba",
-                        class: "a",
+                        subject: "a",
                         room: "Szt.3"
                     },
                     an3: {
                         name: "Seprenyi",
-                        class: "a",
+                        subject: "a",
                         room: "A.2"
                     },
                     an1: {
                         name: "Varga Bo.",
-                        class: "a",
+                        subject: "a",
                         room: "I.30"
                     }
                 }
@@ -362,22 +362,22 @@ const nyf =
                 data: {
                     an2: {
                         name: "Huszár",
-                        class: "a",
+                        subject: "a",
                         room: "I.30"
                     },
                     an3: {
                         name: "Seprenyi",
-                        class: "a",
+                        subject: "a",
                         room: "A.2"
                     },
                     an4: {
                         name: "Tóth",
-                        class: "a",
+                        subject: "a",
                         room: "F.18"
                     },
                     an1: {
                         name: "Varga Bo.",
-                        class: "a",
+                        subject: "a",
                         room: "A.1"
                     }
                 }
@@ -392,12 +392,12 @@ const nyf =
                 data: {
                     szt: {
                         name: "P.-Pásztor",
-                        class: "i",
+                        subject: "i",
                         room: "I.39."
                     },
                     tk: {
                         name: "Krajnyák",
-                        class: "mt",
+                        subject: "mt",
                         room: "T.2"
                     }
                 }
@@ -422,7 +422,7 @@ const nyf =
                 data: {
                     an3: {
                         name: "Seprenyi",
-                        class: "a",
+                        subject: "a",
                         room: "II.41"
                     }
                 }
@@ -433,22 +433,22 @@ const nyf =
                 data: {
                     an2: {
                         name: "Huszár",
-                        class: "a",
+                        subject: "a",
                         room: "A.2"
                     },
                     an3: {
                         name: "Seprenyi",
-                        class: "a",
+                        subject: "a",
                         room: "II.41"
                     },
                     an4: {
                         name: "Tóth",
-                        class: "a",
+                        subject: "a",
                         room: "I.30"
                     },
                     an1: {
                         name: "Varga Bo.",
-                        class: "a",
+                        subject: "a",
                         room: "F.8"
                     }
                 }
@@ -459,27 +459,27 @@ const nyf =
                 data: {
                     ne1: {
                         name: "Halász",
-                        class: "né",
+                        subject: "né",
                         room: "Szt.3"
                     },
                     ol: {
                         name: "Gianelli",
-                        class: "ol",
+                        subject: "ol",
                         room: "F.9"
                     },
                     ne2: {
                         name: "Sótiné",
-                        class: "né",
+                        subject: "né",
                         room: "II.51"
                     },
                     sp: {
                         name: "Sum",
-                        class: "sp",
+                        subject: "sp",
                         room: "D."
                     },
                     fr: {
                         name: "Szabolcsi",
-                        class: "fr",
+                        subject: "fr",
                         room: "II.42"
                     }
                 }
@@ -490,12 +490,12 @@ const nyf =
                 data: {
                     szt: {
                         name: "Krajnyák",
-                        class: "inf",
+                        subject: "inf",
                         room: "Szt.1"
                     },
                     tk: {
                         name: "P.-Pásztor",
-                        class: "ny",
+                        subject: "ny",
                         room: "I.30"
                     }
                 }
@@ -506,12 +506,12 @@ const nyf =
                 data: {
                     szt: {
                         name: "Darabánt",
-                        class: "mt",
+                        subject: "mt",
                         room: "M."
                     },
                     tk: {
                         name: "Krajnyák",
-                        class: "mt",
+                        subject: "mt",
                         room: "T.2"
                     }
                 }
@@ -522,7 +522,7 @@ const nyf =
                 data: {
                     tk: {
                         name: "Papp L.",
-                        class: "inf",
+                        subject: "inf",
                         room: "Tk."
                     }
                 }
@@ -555,22 +555,22 @@ const nyf =
                 data: {
                     an2: {
                         name: "Huszár",
-                        class: "a",
+                        subject: "a",
                         room: "I.32"
                     },
                     an3: {
                         name: "Seprenyi",
-                        class: "a",
+                        subject: "a",
                         room: "Szt.3"
                     },
                     an4: {
                         name: "Tóth",
-                        class: "a",
+                        subject: "a",
                         room: "R."
                     },
                     an1: {
                         name: "Varga Bo.",
-                        class: "a",
+                        subject: "a",
                         room: "I.30"
                     }
                 }
@@ -581,22 +581,22 @@ const nyf =
                 data: {
                     an2: {
                         name: "Huszár",
-                        class: "a",
+                        subject: "a",
                         room: "I.32"
                     },
                     an3: {
                         name: "Seprenyi",
-                        class: "a",
+                        subject: "a",
                         room: "Szt.3"
                     },
                     an4: {
                         name: "Tóth",
-                        class: "a",
+                        subject: "a",
                         room: "R."
                     },
                     an1: {
                         name: "Varga Bo.",
-                        class: "a",
+                        subject: "a",
                         room: "I.30"
                     }
                 }
@@ -607,12 +607,12 @@ const nyf =
                 data: {
                     szt: {
                         name: "P.-Pásztor",
-                        class: "ny",
+                        subject: "ny",
                         room: "I.30."
                     },
                     tk: {
                         name: "Tóth",
-                        class: "a",
+                        subject: "a",
                         room: "F.18"
                     }
                 }
@@ -627,17 +627,17 @@ const nyf =
                 data: {
                     ol: {
                         name: "Gianelli",
-                        class: "ol",
+                        subject: "ol",
                         room: "L."
                     },
                     ne2: {
                         name: "Sótiné",
-                        class: "né",
+                        subject: "né",
                         room: "N."
                     },
                     sp: {
                         name: "Sum",
-                        class: "sp",
+                        subject: "sp",
                         room: "Sp."
                     }
                 }
