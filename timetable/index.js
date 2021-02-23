@@ -1,19 +1,41 @@
 window.onload = function () {
-    var container = document.getElementById("container");
+    var wrapper = document.getElementById("wrapper");
+    var table = document.createElement('table');
+    table.id = "outer";
+    var tbody = document.createElement('tbody');
+    wrapper.appendChild(table);
+    table.appendChild(tbody);
     {
-        container.appendChild(createCell("Órarend", null, "title"))
-    }
-    for (var i = 0; i <= 8; i++) {
-        container.appendChild(createCell(i, "header"));
+        {
+            var tr = document.createElement('tr');
+            tbody.appendChild(tr);
+            var td = document.createElement('td');
+            tr.appendChild(td);
+            td.appendChild(createCell("Órarend"))
+        }
+        for (var i = 0; i < 9; i++) {
+            var td = document.createElement('td');
+            tr.appendChild(td);
+            td.appendChild(createCell(i))
+        }
     }
     for (var i = 0; i < 5; i++) {
-        container.appendChild(createCell(days[i], "sidebar"))
-        for (var j = 0; j <= 8; j++) {
+        var tr = document.createElement('tr');
+        tbody.appendChild(tr);
+        {
+            var td = document.createElement('td');
+            tr.appendChild(td);
+            td.appendChild(createCell(days[i]))
+        }
+        for (var j = 0; j < 9; j++) {
+            var td = document.createElement('td');
+            tr.appendChild(td);
             var entry = nyf[i][j];
             var items = [];
             switch (entry.type) {
 
                 case 0:
+                    items.push("");
                     break;
                 case 1:
                     if (entry.data.lesson != null) items.push(lessonToString(entry.data.lesson))
@@ -51,38 +73,37 @@ window.onload = function () {
 
             var cell = createCell(items);
             cell.style.backgroundColor = colorMap[entry.type]
-            container.appendChild(cell);
+            td.appendChild(cell)
         }
     }
-
-
-
-
-
-
+    tbody.appendChild(tr);
+    tr.appendChild(td);
 
     function lessonToString(lesson) {
         return lesson.name + " " + lesson.subject + " [" + lesson.room + "]"
     }
-    function createCell(items, clazz, id) {
-        var cell = document.createElement('div');
-        if (clazz) cell.className = clazz;
-        if (id) cell.id = id;
+
+    function createCell(items) {
+        var table = document.createElement('table');
+        var tbody = document.createElement('tbody');
         if (items instanceof Array) {
             items.forEach(item => {
-                cell.appendChild(createDoubleDiv(item));
+                tbody.appendChild(createTrTd(item));
             })
         } else {
-            cell.appendChild(createDoubleDiv(items));
+            tbody.appendChild(createTrTd(items));
         }
-        return cell;
+        table.appendChild(tbody);
+        return table;
+
     }
-    function createDoubleDiv(content) {
-        var div1 = document.createElement('div');
-        var div2 = document.createElement('div');
-        div1.appendChild(div2);
-        div2.innerHTML = content;
-        return div1;
+
+    function createTrTd(content) {
+        var tr = document.createElement('tr');
+        var td = document.createElement('td');
+        tr.appendChild(td);
+        td.innerHTML = content;
+        return tr;
     }
 }
 
