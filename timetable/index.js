@@ -18,33 +18,30 @@ window.onload = function () {
         tbody.appendChild(tr);
         tr.appendChild(createMiscCell(days[i]));
         for (var j = 0; j < 9; j++) {
-            var entry = nyf[i][j];
-            var items = [];
-            
-            var trTable = createLessons(nyf[i][j]);
-            tr.appendChild(trTable)
+            var tdTable = createLessons(nyf[i][j]);
+            tr.appendChild(tdTable)
         }
     }
-
-    function lessonToString(lesson) {
-        return lesson.group + " " + lesson.name + " " + lesson.subject + " [" + lesson.room + "]"
-    }
-
     function createLessons(lessonArr) {
-        var tr = document.createElement('td');
+        var td = document.createElement('td');
         var table = document.createElement('table');
         var tbody = document.createElement('tbody');
-        
+
         if (lessonArr && lessonArr instanceof Array) {
             lessonArr.forEach(lesson => {
-                tbody.appendChild(createLesson(lesson));
+                var tr = createLesson(lesson);
+                if (lesson) {
+                    tr.bgColor = (lesson.subject in colorMap) ? colorMap[lesson.subject] : "white";
+                }
+                else {
+                    tr.bgColor = "pink"
+                }
+                tbody.appendChild(tr);
             })
-        } else {
-            tbody.appendChild(createMiscCell(""));
         }
         table.appendChild(tbody);
-        tr.appendChild(table);
-        return tr;
+        td.appendChild(table);
+        return td;
 
     }
 
@@ -60,7 +57,15 @@ window.onload = function () {
         table.appendChild(tbody);
         tr.appendChild(table);
         return tr;
-        
+
+    }
+
+    function createInnerCellWithContent(content) {
+        var tr = document.createElement('tr');
+        var td = document.createElement('td');
+        td.innerHTML = content;
+        tr.appendChild(td);
+        return tr;
     }
     function createLesson(lesson) {
         var tr = document.createElement('tr');
@@ -69,11 +74,8 @@ window.onload = function () {
         if (lesson) {
             td.innerHTML = lesson.name + " " + lesson.subject + " [" + lesson.room + "]";
             if (lesson.group) {
-                td.innerHTML = "("+lesson.group + ") " +  td.innerHTML
+                td.innerHTML = "(" + lesson.group + ") " + td.innerHTML
             }
-        td.bgColor = (lesson.subject in colorMap) ? colorMap[lesson.subject] : "white";
-        } else {
-            td.bgColor = "pink"
         }
         return tr;
     }

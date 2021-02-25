@@ -41,26 +41,22 @@ table#outer {
             font-size: 23px;
         }
 
-    table#outer > tbody > tr:not(:first-child) > td:not(:first-child) {
+    table#outer > tbody > tr > td > table {
+        border-collapse: collapse;
+        table-layout: fixed;
+        width: 100%;
+        height: 100%;
+        border: 1px solid black;
+        background-color: white;
+    }
+
+    table#outer > tbody > tr:not(:first-child) > td:not(:first-child) > table > tbody > tr > td {
         font-size: 16px;
         text-align: left;
+        padding: 0 7px;
+        font-size: 16px;
     }
-        table#outer > tbody > tr > td > table {
-            border-collapse: collapse;
-            table-layout: fixed;
-            width: 100%;
-            height: 100%;
-            border: 1px solid black;
-            background-color:white;
-        }
-        table#outer > tbody > tr:not(:first-child) > td:not(:first-child) > table > tbody > tr > td {
-            font-size: 16px;
-            text-align: left;
-            padding: 0 7px;
-        }
 
-        table#outer > tbody > tr:not(:first-child) > td:not(:first-child) > table > tbody > tr:not(:first-child) {
-            border-top: 0.3px solid black;
-        }
-
-
+    table#outer > tbody > tr:not(:first-child) > td:not(:first-child) > table > tbody > tr:not(:first-child) {
+        border-top: 0.3px solid black;
+    }
