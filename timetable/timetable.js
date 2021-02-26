@@ -90,7 +90,9 @@ const nyf =
             ],
             //Hétfő-4
             [
-                null
+                {
+
+                }
             ],
             //Hétfő-5
             [
@@ -148,17 +150,23 @@ const nyf =
             ],
             //Hétfő-7
             [
-                null
+                {
+
+                }
             ],
             //Hétfő-8
             [
-                null
+                {
+
+                }
             ]
         ],
         [
             //Kedd-0
             [
-                null
+                {
+
+                }
             ],
             //Kedd-1
             [
@@ -219,7 +227,9 @@ const nyf =
                     subject: "né",
                     room: "A.1"
                 },
-                null
+                {
+                    group: "fr"
+                }
             ],
             //Kedd-3
             [
@@ -295,11 +305,15 @@ const nyf =
             ],
             //Kedd-7
             [
-                null
+                {
+
+                }
             ],
             //Kedd-8
             [
-                null
+                {
+
+                }
             ]
         ],
         [
@@ -317,9 +331,15 @@ const nyf =
                     subject: "ol",
                     room: "Ol.1"
                 },
-                null,
-                null,
-                null
+                {
+                    group: "né1"
+                },
+                {
+                    group: "né2"
+                },
+                {
+                    group: "fr"
+                }
             ],
             //Szerda-1
             [
@@ -385,7 +405,9 @@ const nyf =
             ],
             //Szerda-4
             [
-                null
+                {
+
+                }
             ],
             //Szerda-5
             [
@@ -404,29 +426,41 @@ const nyf =
             ],
             //Szerda-6
             [
-                null
+                {
+
+                }
             ],
             //Szerda-7
             [
-                null
+                {
+
+                }
             ],
             //Szerda-8
             [
-                null
+                {
+
+                }
             ]
         ],
         [
             //Csütörtök-0
             [
-                null,
-                null,
+                {
+                    group: "an1"
+                },
+                {
+                    group: "an2"
+                },
                 {
                     group: "an3",
                     name: "Seprenyi",
                     subject: "a",
                     room: "II.41"
                 },
-                null
+                {
+                    group: "an4"
+                }
             ],
             //Csütörtök-1
             [
@@ -520,7 +554,9 @@ const nyf =
             ],
             //Csütörtök-5
             [
-                null,
+                {
+                    group: "szt"
+                },
                 {
                     group: "tk",
                     name: "Papp L.",
@@ -531,25 +567,35 @@ const nyf =
             ,
             //Csütörtök-6
             [
-                null
+                {
+
+                }
             ],
             //Csütörtök-7
             [
-                null
+                {
+
+                }
             ],
             //Csütörtök-8
             [
-                null
+                {
+
+                }
             ]
         ],
         [
             //Péntek-0
             [
-                null
+                {
+
+                }
             ],
             //Péntek-1
             [
-                null
+                {
+
+                }
             ],
             //Péntek-2
             [
@@ -622,7 +668,9 @@ const nyf =
             ],
             //Péntek-6
             [
-                null
+                {
+
+                }
             ],
             //Péntek-6
             [
@@ -638,22 +686,30 @@ const nyf =
                     subject: "ol",
                     room: "L."
                 },
-                null,
+                {
+                    group: "né1"
+                },
                 {
                     group: "né2",
                     name: "Sótiné",
                     subject: "né",
                     room: "N."
                 },
-                null
+                {
+                    group: "fr",
+                }
             ],
             //Péntek-7
             [
-                null
+                {
+
+                }
             ],
             //Péntek-8
             [
-                null
+                {
+
+                }
             ]
         ]
     ]
