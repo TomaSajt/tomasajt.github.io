@@ -23,7 +23,9 @@ const nyf =
                     subject: "mt",
                     room: "I.30"
                 },
-                null
+                {
+                    group: "tk"
+                }
             ],
             //Hétfő-1
             [
