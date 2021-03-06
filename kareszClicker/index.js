@@ -30,26 +30,22 @@
     var kpc = 1;
     var kps = 0;
 
-    window.onload = onPageLoad;
-
-    function onPageLoad() {
-        kareszCountText = document.getElementById("kareszCountText")
-        sidebar = document.getElementById("sidebar");
-        kareszPerSecText = document.getElementById("kareszPerSecText")
-        document.getElementById('saveButton').addEventListener("click", function () { saveGame() });
-        document.getElementById('loadButton').addEventListener("click", function () { loadGame(true) });
-        document.getElementById('resetButton').addEventListener("click", function () { resetGame() });
-        document.getElementById("kareszImage").addEventListener("click", function () { kareszClicked() });
-        if (localStorage.getItem('version') != '1.1.1') {
-            localStorage.setItem("saved", "false")
-        }
-        localStorage.setItem("version", "1.1.1")
-        if (localStorage.getItem("saved") != "true") {
-            saveGame();
-        }
-        loadGame(false);
-        setInterval(tick, 1000)
+    kareszCountText = document.getElementById("kareszCountText")
+    sidebar = document.getElementById("sidebar");
+    kareszPerSecText = document.getElementById("kareszPerSecText")
+    document.getElementById('saveButton').addEventListener("click", function () { saveGame() });
+    document.getElementById('loadButton').addEventListener("click", function () { loadGame(true) });
+    document.getElementById('resetButton').addEventListener("click", function () { resetGame() });
+    document.getElementById("kareszImage").addEventListener("click", function () { kareszClicked() });
+    if (localStorage.getItem('version') != '1.1.1') {
+        localStorage.setItem("saved", "false")
     }
+    localStorage.setItem("version", "1.1.1")
+    if (localStorage.getItem("saved") != "true") {
+        saveGame();
+    }
+    loadGame(false);
+    setInterval(tick, 1000)
 
     function tick() {
         kareszCount += kps

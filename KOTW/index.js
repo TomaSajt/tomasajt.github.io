@@ -115,70 +115,8 @@ function modulo(a, b) {
         return a % b;
 }
 console.log(modulo(-1, 4))
-var upImage
-var rightImage
-var downImage
-var leftImage
-var canvas = document.createElement("canvas")
-var imgSize = 20
-var data = Array(41).fill().map(function () { return Array(31).fill(0) })
-data[3][4] = 1
-data[3][5] = 1
-data[4][6] = 1
-data[5][6] = 1
-data[6][6] = 1
-data[7][6] = 1
-data[8][6] = 1
-data[9][6] = 1
-data[10][5] = 1
-data[10][4] = 1
 
-data[5][1] = 1
-data[8][1] = 1
-var karesz = new Robot()
 
-function saveLevel() {
-    var levelString = "";
-    for (var j = 0; j < data[0].length; j++) {
-        for (var i = 0; i < data.length; i++) {
-            levelString += data[i][j]
-            if (i != data.length-1) {
-                levelString += "\t";
-            }
-        }
-        levelString += "\n";
-    }
-    var file = new Blob([levelString], { type: "text / plain" });
-    var name = "level.txt";
-    if (window.navigator.msSaveOrOpenBlob) // IE10+
-        window.navigator.msSaveOrOpenBlob(file, name);
-    else { // Others
-        var a = document.createElement("a"),
-            url = URL.createObjectURL(file);
-        a.href = url;
-        a.download = name;
-        document.body.appendChild(a);
-        a.click();
-        setTimeout(function () {
-            document.body.removeChild(a);
-            window.URL.revokeObjectURL(url);
-        }, 0);
-    }
-}
-window.onload = function () {
-    upImage = document.getElementById('up')
-    rightImage = document.getElementById('right')
-    downImage = document.getElementById('down')
-    leftImage = document.getElementById('left')
-
-    canvas.width = data.length * (imgSize + 1) + 1;
-    canvas.height = data[0].length * (imgSize + 1) + 1;
-    var ctx = getContext();
-    ctx.translate(0.5, 0.5)
-    ctx.imageSmoothingEnabled = false;
-    document.getElementById('canvasContainer').appendChild(canvas)
-    update()
-}
 document.addEventListener('mousedown', function (event) {
     if (event.detail > 1) {
         event.preventDefault();
@@ -235,3 +173,73 @@ function update() {
     }
 
 }
+function saveLevel() {
+    var levelString = "";
+    for (var j = 0; j < data[0].length; j++) {
+        for (var i = 0; i < data.length; i++) {
+            levelString += data[i][j]
+            if (i != data.length - 1) {
+                levelString += "\t";
+            }
+        }
+        levelString += "\n";
+    }
+    var file = new Blob([levelString], { type: "text / plain" });
+    var name = "level.txt";
+    if (window.navigator.msSaveOrOpenBlob) // IE10+
+        window.navigator.msSaveOrOpenBlob(file, name);
+    else { // Others
+        var a = document.createElement("a"),
+            url = URL.createObjectURL(file);
+        a.href = url;
+        a.download = name;
+        document.body.appendChild(a);
+        a.click();
+        setTimeout(function () {
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+        }, 0);
+    }
+}
+
+var upImage
+var rightImage
+var downImage
+var leftImage
+var canvas = document.createElement("canvas")
+var imgSize = 20
+var data = Array(41).fill().map(function () { return Array(31).fill(0) })
+data[3][4] = 1
+data[3][5] = 1
+data[4][6] = 1
+data[5][6] = 1
+data[6][6] = 1
+data[7][6] = 1
+data[8][6] = 1
+data[9][6] = 1
+data[10][5] = 1
+data[10][4] = 1
+
+data[5][1] = 1
+data[8][1] = 1
+var karesz = new Robot()
+
+
+
+
+
+
+upImage = document.getElementById('up')
+rightImage = document.getElementById('right')
+downImage = document.getElementById('down')
+leftImage = document.getElementById('left')
+
+canvas.width = data.length * (imgSize + 1) + 1;
+canvas.height = data[0].length * (imgSize + 1) + 1;
+var ctx = getContext();
+ctx.translate(0.5, 0.5)
+ctx.imageSmoothingEnabled = false;
+document.getElementById('canvasContainer').appendChild(canvas)
+
+
+window.onload = update
