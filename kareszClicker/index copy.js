@@ -1,5 +1,5 @@
-(function() {
-    var Item = /** @class */ (function() {
+(function () {
+    var Item = /** @class */ (function () {
         function Item(id, itemText, price, multiplier, kps, kpc, criteria) {
             this.unlocked = false;
             this.count = 0;
@@ -13,13 +13,12 @@
         }
         return Item;
     }());
-
     function defaultItems() {
         return [
-            new Item("strongClick", "Strong Click", 100, 3, 0, 1, function() { return true; }),
-            new Item("kareszGenerator", "Karesz Generator", 50, 1.5, 1, 0, function() { return true; }),
-            new Item("kareszFactory", "Karesz Factory", 600, 1.6, 10, 0, function() { return items[1].count >= 3; }),
-            new Item("kareszTown", "Karesz Town", 3000, 1.62, 69, 0, function() { return items[2].count >= 3; })
+            new Item("strongClick", "Strong Click", 100, 3, 0, 1, function () { return true; }),
+            new Item("kareszGenerator", "Karesz Generator", 50, 1.5, 1, 0, function () { return true; }),
+            new Item("kareszFactory", "Karesz Factory", 600, 1.6, 10, 0, function () { return items[1].count >= 3; }),
+            new Item("kareszTown", "Karesz Town", 3000, 1.62, 69, 0, function () { return items[2].count >= 3; })
         ];
     }
     var items = defaultItems();
@@ -29,10 +28,10 @@
     var kareszPerSecText = document.getElementById("kareszPerSecText");
     var kpc = 1;
     var kps = 0;
-    document.getElementById('saveButton').addEventListener("click", function() { saveGame(); });
-    document.getElementById('loadButton').addEventListener("click", function() { loadGame(true); });
-    document.getElementById('resetButton').addEventListener("click", function() { resetGame(); });
-    document.getElementById("kareszImage").addEventListener("click", function() { kareszClicked(); });
+    document.getElementById('saveButton').addEventListener("click", function () { saveGame(); });
+    document.getElementById('loadButton').addEventListener("click", function () { loadGame(true); });
+    document.getElementById('resetButton').addEventListener("click", function () { resetGame(); });
+    document.getElementById("kareszImage").addEventListener("click", function () { kareszClicked(); });
     if (localStorage.getItem('version') != '1.1.1') {
         localStorage.setItem("saved", "false");
     }
@@ -42,12 +41,10 @@
     }
     loadGame(false);
     setInterval(tick, 1000);
-
     function tick() {
         kareszCount += kps;
         update();
     }
-
     function buyItem(id, num) {
         var item = items[id];
         for (var i = 0; i < num && item.price <= kareszCount; i++) {
@@ -59,12 +56,10 @@
             update();
         }
     }
-
     function earn(amount) {
         kareszCount += amount;
         update();
     }
-
     function saveGame() {
         localStorage.setItem("saved", "true");
         localStorage.setItem("kareszCount", "" + kareszCount);
@@ -72,11 +67,9 @@
         localStorage.setItem("kpc", "" + kpc);
         localStorage.setItem("items", JSON.stringify(items));
     }
-
     function kareszClicked() {
         earn(kpc);
     }
-
     function resetGame() {
         if (confirm("Are you sure you want to reset?\nYou will lose all " + kareszCount + " of you Karesz'")) {
             localStorage.clear();
@@ -87,7 +80,6 @@
             loadGame(false);
         }
     }
-
     function loadGame(shouldAsk) {
         if (shouldAsk) {
             if (!confirm("Are you sure you want to load your save with " + parseInt(localStorage.getItem("kareszCount")) + " Karesz'")) {
@@ -113,7 +105,6 @@
         }
         update();
     }
-
     function update() {
         kareszCountText.innerHTML = "Karesz count: " + kareszCount;
         kareszPerSecText.innerHTML = kps + " Karesz/sec";
@@ -124,14 +115,14 @@
                     var itemH = sidebar.querySelector("#" + item.id);
                     var itemPriceText = itemH.querySelector(".itemPriceText");
                     itemPriceText.innerHTML = "Price: " + item.price;
-                } else if (item.criteria()) {
+                }
+                else if (item.criteria()) {
                     addItemToSidebar(i);
                     update(); //recursion, recursion go away, come again another day //// recursion should not happen
                 }
             }
         }
     }
-
     function addItemToSidebar(id) {
         var item = items[id];
         item.unlocked = true;
@@ -145,7 +136,7 @@
         var itemButton = document.createElement("button");
         itemButton.className = "itemButton";
         itemButton.innerHTML = "Buy 1";
-        itemButton.addEventListener("click", function() { buyItem(id, 1); });
+        itemButton.addEventListener("click", function () { buyItem(id, 1); });
         var itemPriceText = document.createElement("div");
         itemPriceText.className = "itemPriceText";
         itemPriceText.innerHTML = "Price: ";
@@ -154,7 +145,6 @@
         itemH.appendChild(itemPriceText);
         sidebar.appendChild(itemH);
     }
-
     function removeItemFromSidebar(id) {
         var item = items[id];
         var sidebar = document.querySelector("#sidebar");
