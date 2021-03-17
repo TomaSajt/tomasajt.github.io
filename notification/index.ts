@@ -1,16 +1,23 @@
-async function clicked() {
-  var permission = await Notification.requestPermission();
-
-  if (permission == "default") {
-    alert("You tried to escape, didn't you?");
-    clicked();
-  } else if (permission == "denied") {
-    alert("You made karesz sad");
-  } else {
-    console.log("granted pog");
-    var notif = new Notification("Attention!!!!", { body: "There are 25 hot karesz near your area." ,image:'../assets/Karesz2.png',actions:[{title:'Join into the fun',action:'join'},{title:'Dismiss',action:'dismiss'}] });
-  notif.onclick = ev => {
-    console.log(ev)
-  }
-}
+function clicked() {
+  Notification.requestPermission().then((permission) => {
+    if (permission == "default") {
+      alert("You tried to escape, didn't you?");
+      clicked();
+    } else if (permission == "denied") {
+      alert("You made karesz sad");
+    } else {
+      console.log("granted pog");
+      var notif = new Notification("Attention!!!!", {
+        body: "There are 25 hot karesz near your area.",
+        image: "../assets/Karesz2.png",
+        actions: [
+          { title: "Join into the fun", action: "join" },
+          { title: "Dismiss", action: "dismiss" },
+        ],
+      });
+      notif.onclick = (ev) => {
+        console.log(ev);
+      };
+    }
+  });
 }
