@@ -2,11 +2,15 @@ async function clicked() {
   var permission = await Notification.requestPermission();
 
   if (permission == "default") {
-    console.log("default pog");
+    alert("You tried to escape, didn't you?");
+    clicked();
   } else if (permission == "denied") {
-    console.log("denied sad karesz");
+    alert("You made karesz sad");
   } else {
     console.log("granted pog");
-    new Notification("Poggers", { body: "hello" });
+    var notif = new Notification("Attention!!!!", { body: "There are 25 hot karesz near your area." ,image:'../assets/Karesz2.png',actions:[{title:'Join into the fun',action:'join'},{title:'Dismiss',action:'dismiss'}] });
+  notif.onclick = ev => {
+    console.log(ev)
   }
+}
 }
