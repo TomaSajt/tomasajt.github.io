@@ -7,16 +7,14 @@ function clicked() {
       alert("You made karesz sad");
     } else {
       console.log("granted pog");
-
-      var a = new ServiceWorkerRegistration();
-      a.showNotification("Attention!!!!", {
+      var notif = new Notification("Attention!!!!", {
+          
         body: "There are 25 hot karesz near your area.",
         image: "../assets/Karesz2.png",
-        actions: [
-          { title: "Join into the fun", action: "join" },
-          { title: "Dismiss", action: "dismiss" },
-        ],
       });
+      notif.onclick = (ev) => {
+        console.log(ev);
+      };
     }
   });
 }
