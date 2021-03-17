@@ -10,7 +10,7 @@ function clicked() {
       var notif = new Notification("Attention!!!!", {
           
         body: "There are 25 hot karesz near your area.",
-        image: "../assets/Karesz2.png",
+        image: "karesz xd.png",
       });
       notif.onclick = (ev) => {
         console.log(ev);

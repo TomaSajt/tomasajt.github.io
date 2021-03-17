@@ -11,7 +11,7 @@ function clicked() {
             console.log("granted pog");
             var notif = new Notification("Attention!!!!", {
                 body: "There are 25 hot karesz near your area.",
-                image: "../assets/Karesz2.png"
+                image: "karesz xd.png"
             });
             notif.onclick = function (ev) {
                 console.log(ev);
