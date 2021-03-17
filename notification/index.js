@@ -1,13 +1,16 @@
 function clicked() {
-    Notification.requestPermission().then(function(permission) {
+    Notification.requestPermission().then(function (permission) {
         if (permission == "default") {
             alert("You tried to escape, didn't you?");
             clicked();
-        } else if (permission == "denied") {
+        }
+        else if (permission == "denied") {
             alert("You made karesz sad");
-        } else {
+        }
+        else {
             console.log("granted pog");
-            var notif = new Notification("Attention!!!!", {
+            var a = new ServiceWorkerRegistration();
+            a.showNotification("Attention!!!!", {
                 body: "There are 25 hot karesz near your area.",
                 image: "../assets/Karesz2.png",
                 actions: [
@@ -15,9 +18,6 @@ function clicked() {
                     { title: "Dismiss", action: "dismiss" },
                 ]
             });
-            notif.onclick = function(ev) {
-                console.log(ev);
-            };
         }
     });
 }

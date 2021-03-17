@@ -7,7 +7,9 @@ function clicked() {
       alert("You made karesz sad");
     } else {
       console.log("granted pog");
-      var notif = new Notification("Attention!!!!", {
+
+      var a = new ServiceWorkerRegistration();
+      a.showNotification("Attention!!!!", {
         body: "There are 25 hot karesz near your area.",
         image: "../assets/Karesz2.png",
         actions: [
@@ -15,9 +17,6 @@ function clicked() {
           { title: "Dismiss", action: "dismiss" },
         ],
       });
-      notif.onclick = (ev) => {
-        console.log(ev);
-      };
     }
   });
 }
