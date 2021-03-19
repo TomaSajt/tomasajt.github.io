@@ -14,7 +14,7 @@ function clicked() {
                 image: "karesz xd.png"
             });
             notif.onclick = function (ev) {
-                console.log(ev);
+                window.location.href = 'https://bit.ly/3tGAPF3';
             };
         }
     });
