@@ -1,6 +1,6 @@
 const days = ["Hétfő", "Kedd", "Szerda", "Csütörtök", "Péntek"]
 const colorMap = {
-    "mt": "darkgreen",
+    "mt": "palegoldenrod",
     "sp": "orange",
     "ol": "orange",
     "né": "orange",
