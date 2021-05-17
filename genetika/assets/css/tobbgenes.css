@@ -1,0 +1,59 @@
+.borso-sarga-sima {
+    background-image: url('../images/borso/sarga-sima.png')
+}
+
+.borso-sarga-rancos {
+    background-image: url('../images/borso/sarga-rancos.png')
+}
+
+.borso-zold-sima {
+    background-image: url('../images/borso/zold-sima.png')
+}
+
+.borso-zold-rancos {
+    background-image: url('../images/borso/zold-rancos.png')
+}
+
+#tobbgenes-p {
+    grid-template: /**/
+    "empty p-top p-left" 120px/**/
+    /120px 120px 120px;
+}
+
+#tobbgenes-p #empty {
+    white-space: nowrap;
+}
+
+#tobbgenes-f1 {
+    --empty-size: 12px;
+    --child-size: 14px;
+    --p-size: 10px;
+    --p-sub-size: 14px;
+    gap: 5px;
+    padding: 5px;
+    grid-template: /**/
+    "empty empty p-top p-top p-top p-top" 70px/**/
+    "empty empty p-top-1 p-top-2 p-top-3 p-top-4" 35px/**/
+    "p-left p-left-1 . . . ." 70px/**/
+    "p-left p-left-2 . . . ." 70px/**/
+    "p-left p-left-3 . . . ." 70px/**/
+    "p-left p-left-4 . . . ." 70px/**/
+    /70px 35px 70px 70px 70px 70px;
+}
+
+#tobbgenes-f2 {
+    grid-template: /**/
+    "empty empty p-top p-top p-top p-top" 100px
+    /**/
+    "empty empty p-top-1 p-top-2 p-top-3 p-top-4" 50px
+    /**/
+    "p-left p-left-1 . . . ." 100px
+    /**/
+    "p-left p-left-2 . . . ." 100px
+    /**/
+    "p-left p-left-3 . . . ." 100px
+    /**/
+    "p-left p-left-4 . . . ." 100px
+    /**/
+    /100px 50px 100px 100px 100px 100px;
+}

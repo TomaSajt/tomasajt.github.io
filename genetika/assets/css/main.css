@@ -1,0 +1,188 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: linear-gradient(45deg, rgb(18, 88, 19), rgb(40, 226, 59));
+    background-attachment: fixed;
+    margin: 10px auto;
+    width: 1200px;
+}
+
+main {
+    font-family: "Nunito";
+    padding: 10px 30px 30px;
+    background-color: #e3e3e3;
+    border: 5px solid #333;
+    border-top: none;
+}
+
+:root {
+    font-size: 20px;
+}
+
+main,
+section {
+    overflow: auto;
+    clear: both;
+}
+
+section {
+    padding: 10px;
+}
+
+main :any-link {
+    color: darkgreen;
+}
+
+main :any-link:hover {
+    color: green;
+}
+
+main *+* {
+    margin-top: 1em;
+}
+
+h1 {
+    font-weight: bold;
+    text-align: center;
+    font-size: 2em;
+    border-bottom: black solid 1px;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+sub {
+    vertical-align: bottom;
+    font-size: 60%;
+}
+
+sup {
+    vertical-align: top;
+    font-size: 60%;
+}
+
+header>div {
+    font-family: "Nunito";
+    font-weight: bold;
+    box-sizing: content-box;
+    margin: auto;
+    clip-path: polygon(60px 0, 0 40px, 60px 80px, 340px 80px, 400px 40px, 340px 0);
+    background-color: #333;
+    width: 400px;
+    height: 80px;
+    margin-bottom: 10px;
+    font-size: 30px;
+    text-align: center;
+    position: relative;
+}
+
+header>div>div {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    background-color: #f2ffbb;
+    width: 380px;
+    height: 70px;
+    clip-path: polygon(53px 0, 0 35px, 53px 70px, 327px 70px, 380px 35px, 327px 0);
+}
+
+header>div>div>span {
+    color: black;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width: max-content;
+}
+
+nav {
+    overflow: hidden;
+    background-color: #333;
+    font-family: sans-serif;
+    user-select: none;
+    padding: 5px 5px 0;
+}
+
+nav>a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 250ms;
+}
+
+.dropdown {
+    font-size: 16px;
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    display: inline-block;
+    cursor: default;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    transition: background-color 250ms;
+}
+
+nav>a:hover,
+.dropdown:hover .dropbtn {
+    background-color: ForestGreen;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.geno {
+    font-weight: bold;
+    color: darkgreen;
+}
+
+footer {
+    margin-top: 7em !important;
+    font-size: small;
+    text-align: center;
+}
+
+.subtitle {
+    margin-top: unset;
+    text-align: center;
+}

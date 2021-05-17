@@ -1,0 +1,90 @@
+.grid-container {
+    white-space: nowrap;
+    font-family: sans-serif;
+    display: grid;
+    width: min-content;
+    grid-gap: 10px;
+    background-color: #2196F3;
+    padding: 10px;
+    float: right;
+    margin-left: 30px;
+}
+
+.grid-container>div {
+    background-color: white;
+    text-align: center;
+    position: relative;
+    font-size: 28px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin: unset;
+}
+
+.grid-container>div>div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.grid-container img {
+    width: 100%;
+}
+
+.grid-container>#empty {
+    grid-area: empty;
+    white-space: normal;
+    font-size: var(--empty-size, 16px);
+}
+
+.grid-container>#p-top {
+    grid-area: p-top;
+    font-size: var(--p-size, 16px);
+}
+
+.grid-container>#p-left {
+    grid-area: p-left;
+    font-size: var(--p-size, 16px);
+}
+
+.grid-container>.child {
+    font-size: var(--child-size, 28px);
+}
+
+.grid-container>[id^=p-top-],
+.grid-container>[id^=p-left-] {
+    font-size: var(--p-sub-size, 28px);
+}
+
+.grid-container>#p-top-1 {
+    grid-area: p-top-1;
+}
+
+.grid-container>#p-top-2 {
+    grid-area: p-top-2;
+}
+
+.grid-container>#p-top-3 {
+    grid-area: p-top-3;
+}
+
+.grid-container>#p-top-4 {
+    grid-area: p-top-4;
+}
+
+.grid-container>#p-left-1 {
+    grid-area: p-left-1;
+}
+
+.grid-container>#p-left-2 {
+    grid-area: p-left-2;
+}
+
+.grid-container>#p-left-3 {
+    grid-area: p-left-3;
+}
+
+.grid-container>#p-left-4 {
+    grid-area: p-left-4;
+}
