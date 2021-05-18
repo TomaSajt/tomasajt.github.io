@@ -1,5 +1,5 @@
-
 loadTable()
+
 function loadTable() {
     for (var key in colorMap) {
         if (colorMap.hasOwnProperty(key)) {
@@ -22,8 +22,7 @@ function loadTable() {
     wrapper.appendChild(table);
     table.id = "outer";
     var tbody = document.createElement('tbody');
-    table.appendChild(tbody);
-    {
+    table.appendChild(tbody); {
         var tr = document.createElement('tr');
         tbody.appendChild(tr);
         tr.appendChild(createMiscCell("Órarend"));
@@ -36,7 +35,7 @@ function loadTable() {
         tbody.appendChild(tr);
         tr.appendChild(createMiscCell(days[i]));
         for (var j = 0; j < 9; j++) {
-            var tdTable = createLessonsCell(nyf[i][j]);
+            var tdTable = createLessonsCell(nyf_new[i][j]);
             tr.appendChild(tdTable)
         }
     }
@@ -60,8 +59,7 @@ function loadTable() {
                     var tr = createTrTdWithContent(toBeContent);
                     if (lesson && lesson.subject) {
                         tr.style.backgroundColor = `var(--${lesson.subject}-color)`
-                    }
-                    else {
+                    } else {
                         tr.style.backgroundColor = 'pink'
                     }
                     tbody.appendChild(tr);
@@ -109,6 +107,3 @@ function loadTable() {
 
 
 }
-
-
-

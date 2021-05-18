@@ -4,11 +4,14 @@
 }
 
 body {
+    overflow: hidden;
     background-color: #5a81c7;
     font-family: sans-serif;
 }
 
+
 /*The outer table*/
+
 table#outer {
     table-layout: fixed;
     border-collapse: separate;
@@ -18,69 +21,82 @@ table#outer {
     text-align: center;
     line-height: 0;
 }
-    /*All sidebar cells*/
-    table#outer > tbody > tr > td:first-child {
-        width: 100px;
-        font-size: 19.2px;
-    }
 
-    /*All header cells*/
-    table#outer > tbody > tr:first-child > td {
-        font-size: 32px;
-        height: 80px;
-    }
 
-        /*Title cell*/
-        table#outer > tbody > tr:first-child > td:first-child {
-            font-size: 23px;
-        }
+/*All sidebar cells*/
 
-    /*All inner tables*/
-    table#outer > tbody > tr > td > table {
-        border-collapse: collapse;
-        table-layout: fixed;
-        width: 100%;
-        height: 100%;
-        border: 1px solid black;
-        background-color: white;
-    }
+table#outer>tbody>tr>td:first-child {
+    width: 100px;
+    font-size: 19.2px;
+}
 
-    /*All lesson cells*/
-    table#outer > tbody > tr:not(:first-child) > td:not(:first-child) > table > tbody > tr > td {
-        font-size: 16px;
-        text-align: left;
-        padding-left: 7px;
-        white-space: nowrap;
-    }
 
-    /*All lesson cells which are not the top cell*/
-    table#outer > tbody > tr:not(:first-child) > td:not(:first-child) > table > tbody > tr:not(:first-child) > td {
-        border-top: 0.3px solid black;
-    }
+/*All header cells*/
+
+table#outer>tbody>tr:first-child>td {
+    font-size: 32px;
+    height: 80px;
+}
+
+
+/*Title cell*/
+
+table#outer>tbody>tr:first-child>td:first-child {
+    font-size: 23px;
+}
+
+
+/*All inner tables*/
+
+table#outer>tbody>tr>td>table {
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    background-color: white;
+}
+
+
+/*All lesson cells*/
+
+table#outer>tbody>tr:not(:first-child)>td:not(:first-child)>table>tbody>tr>td {
+    font-size: 16px;
+    text-align: left;
+    padding-left: 7px;
+    white-space: nowrap;
+}
+
+
+/*All lesson cells which are not the top cell*/
+
+table#outer>tbody>tr:not(:first-child)>td:not(:first-child)>table>tbody>tr:not(:first-child)>td {
+    border-top: 0.3px solid black;
+}
 
 div#menu {
     padding: 10px;
     white-space: nowrap;
 }
 
-    div#menu label {
-        line-height: 2em;
-    }
+div#menu label {
+    line-height: 2em;
+}
 
-    div#menu input[type=text] {
-        border: none;
-        outline: none;
-        padding: 5px;
-        width: 290px;
-        height: 20px;
-    }
+div#menu input[type=text] {
+    border: none;
+    outline: none;
+    padding: 5px;
+    width: 290px;
+    height: 20px;
+}
 
-    div#menu input[type=button] {
-        border: solid black 1px;
-        outline: none;
-        padding: 5px;
-        margin-left: 5px;
-        width: 80px;
-        height: 30px;
-        box-sizing: border-box;
-    }
+div#menu input[type=button] {
+    border: solid black 1px;
+    outline: none;
+    padding: 5px;
+    margin-left: 5px;
+    width: 80px;
+    height: 30px;
+    box-sizing: border-box;
+}
